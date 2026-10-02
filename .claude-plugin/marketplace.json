@@ -1,0 +1,24 @@
+{
+  "name": "cc-mods",
+  "owner": { "name": "Adam" },
+  "metadata": {
+    "description": "Claude Code mods: an office of your running sessions, an image viewfinder and an ambient animation strip."
+  },
+  "plugins": [
+    {
+      "name": "office",
+      "source": "./plugins/office",
+      "description": "A pixel-art office of your running Claude Code sessions, animated by what each one is doing."
+    },
+    {
+      "name": "viewfinder",
+      "source": "./plugins/viewfinder",
+      "description": "Shows the images and screenshots Claude looks at, in a pane or above the prompt."
+    },
+    {
+      "name": "ambient",
+      "source": "./plugins/ambient",
+      "description": "An animated strip above the prompt that follows Claude's work, in eight styles."
+    }
+  ]
+}

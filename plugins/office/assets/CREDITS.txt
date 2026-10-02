@@ -1,0 +1,12 @@
+The office's picture characters (office-atlas.bin, office-atlas.json) are
+tiles cut from these packs by Kenney (https://kenney.nl), each released under
+Creative Commons Zero (CC0 1.0): https://creativecommons.org/publicdomain/zero/1.0/
+
+  Roguelike Characters   https://kenney.nl/assets/roguelike-characters   people: bodies, clothes, hair, beards
+  Roguelike Indoors      https://kenney.nl/assets/roguelike-indoors      the office chair
+
+tools/build-atlas.py rebuilds the atlas from the unzipped packs. Credit is
+not required by CC0; it is given because it is due.
+
+The robots, critters, animals, crown and confetti are drawn for this mod in
+the same style (hooks/office-art-hd.mjs) and share the mod's licence.

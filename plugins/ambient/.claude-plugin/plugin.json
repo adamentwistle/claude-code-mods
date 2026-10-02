@@ -1,0 +1,67 @@
+{
+  "name": "ambient",
+  "version": "0.5.0",
+  "description": "An animated strip above the prompt that moves with the work, in eight styles from a request mesh to a lava lamp",
+  "author": {
+    "name": "Adam"
+  },
+  "userConfig": {
+    "style": {
+      "type": "string",
+      "title": "Style",
+      "description": "What the strip shows: network, critter, aurora, synthwave, warp, murmuration, lava or wave. /ambient styles describes each; a style picked with /ambient wins over this",
+      "options": [
+        "network",
+        "critter",
+        "aurora",
+        "synthwave",
+        "warp",
+        "murmuration",
+        "lava",
+        "wave"
+      ],
+      "default": "network"
+    },
+    "rows": {
+      "type": "string",
+      "title": "Strip height",
+      "description": "Rows the strip takes above the prompt, 1 to 6 (critter uses at least 3, synthwave at least 4)",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "default": "3"
+    },
+    "intensity": {
+      "type": "string",
+      "title": "Intensity",
+      "description": "How bright the strip draws: soft, bright or vivid",
+      "options": [
+        "soft",
+        "bright",
+        "vivid"
+      ],
+      "default": "bright"
+    },
+    "palette": {
+      "type": "string",
+      "title": "Palette",
+      "description": "Colors for every style but network. auto follows the current ccs-theme Ghostty theme",
+      "options": [
+        "auto",
+        "nightshade",
+        "rose-pine",
+        "kanagawa-wave",
+        "kanagawa-dragon",
+        "catppuccin-mocha",
+        "catppuccin-latte",
+        "dusk"
+      ],
+      "default": "auto"
+    }
+  }
+}

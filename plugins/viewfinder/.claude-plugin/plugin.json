@@ -1,0 +1,27 @@
+{
+  "name": "viewfinder",
+  "version": "0.1.0",
+  "description": "Shows the screenshots and images Claude looks at in a pane beside the transcript",
+  "author": {
+    "name": "Adam"
+  },
+  "userConfig": {
+    "autoOpen": {
+      "type": "boolean",
+      "title": "Open the pane by itself",
+      "description": "Open the Viewfinder pane when Claude looks at a new image. Off: use /viewfinder.",
+      "default": true
+    },
+    "render": {
+      "type": "string",
+      "title": "How to draw pictures",
+      "description": "auto: real pixels where the terminal can, half-block colour cells elsewhere (herdr, tmux). image: always pixels. blocks: always cells.",
+      "options": [
+        "auto",
+        "image",
+        "blocks"
+      ],
+      "default": "auto"
+    }
+  }
+}

@@ -1,0 +1,158 @@
+{
+  "name": "office",
+  "version": "0.9.0",
+  "description": "A pixel-art office of your running Claude Code sessions: one desk per session, animated by what it is doing, with speech bubbles, layouts, characters and drag to arrange. Uses herdr when present, Claude Code's own session records otherwise.",
+  "author": {
+    "name": "Adam"
+  },
+  "userConfig": {
+    "layout": {
+      "type": "string",
+      "title": "Office layout",
+      "description": "grid (desk tiles), tiles (desk cards with a small real picture of each character), office (a room with desks), war-room (everyone round one table) or strip (one compact row for a narrow pane)",
+      "options": [
+        "grid",
+        "tiles",
+        "office",
+        "war-room",
+        "strip"
+      ],
+      "default": "grid"
+    },
+    "characters": {
+      "type": "string",
+      "title": "Office characters",
+      "description": "Who sits at the desks: critters, humans, robots, animals, or mixed by project",
+      "options": [
+        "critters",
+        "humans",
+        "robots",
+        "animals",
+        "mixed"
+      ],
+      "default": "critters"
+    },
+    "style": {
+      "type": "string",
+      "title": "Office character style",
+      "description": "bold draws chunky, high-contrast characters made for cells; detailed draws the finer ones",
+      "options": [
+        "bold",
+        "detailed"
+      ],
+      "default": "bold"
+    },
+    "lighting": {
+      "type": "string",
+      "title": "Office lighting",
+      "description": "clock follows the time of day; day and night fix it",
+      "options": [
+        "clock",
+        "day",
+        "night"
+      ],
+      "default": "clock"
+    },
+    "palette": {
+      "type": "string",
+      "title": "Office palette",
+      "description": "nightshade follows the Nightshade Ghostty theme; warm, cool and mono are presets",
+      "options": [
+        "nightshade",
+        "warm",
+        "cool",
+        "mono"
+      ],
+      "default": "nightshade"
+    },
+    "show": {
+      "type": "string",
+      "title": "Office: which panes",
+      "description": "claude (only Claude sessions, the default), agents (any coding agent), busy (also terminals running something, as robots), all (also idle shells, as empty desks)",
+      "options": [
+        "claude",
+        "agents",
+        "busy",
+        "all"
+      ],
+      "default": "claude"
+    },
+    "desks": {
+      "type": "string",
+      "title": "Office: desks at a time",
+      "description": "How many desks show at once, the most relevant first (needs you, working, done, idle); m pages through the rest",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "12",
+        "all"
+      ],
+      "default": "8"
+    },
+    "hide_done_minutes": {
+      "type": "number",
+      "title": "Office: hide done after (minutes)",
+      "description": "Leave out sessions that have been done this long; 0 keeps them",
+      "default": 0,
+      "min": 0,
+      "max": 1440
+    },
+    "seating": {
+      "type": "string",
+      "title": "Office seating",
+      "description": "state (needs you, working, done, idle, busy terminals), stable (a session keeps its desk), project, or workspace",
+      "options": [
+        "state",
+        "stable",
+        "project",
+        "workspace"
+      ],
+      "default": "state"
+    },
+    "speed": {
+      "type": "string",
+      "title": "Office animation speed",
+      "description": "slow, normal or fast",
+      "options": [
+        "slow",
+        "normal",
+        "fast"
+      ],
+      "default": "normal"
+    },
+    "reduced_motion": {
+      "type": "boolean",
+      "title": "Office: reduced motion",
+      "description": "Slower, calmer animation with no particles or flashing",
+      "default": false
+    },
+    "notify": {
+      "type": "string",
+      "title": "Office toasts",
+      "description": "Toast when a session needs you, on every state change, or never",
+      "options": [
+        "needs-you",
+        "changes",
+        "off"
+      ],
+      "default": "needs-you"
+    },
+    "sound": {
+      "type": "boolean",
+      "title": "Office: sound when someone needs you",
+      "description": "Play a short chime when a session starts waiting for you",
+      "default": false
+    },
+    "render": {
+      "type": "string",
+      "title": "Office picture",
+      "description": "hybrid (the default): the cell office with its people as sharp real pictures, where the terminal can show them (inside herdr, launch Claude Code with CLAUDE_CODE_FORCE_TERMINAL_IMAGES=1); cells: no pictures",
+      "options": [
+        "hybrid",
+        "cells"
+      ],
+      "default": "hybrid"
+    }
+  }
+}

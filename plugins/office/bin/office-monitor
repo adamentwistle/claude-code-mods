@@ -1,0 +1,12 @@
+#!/bin/sh
+# The office as a standalone full-screen monitor: no Claude session needed.
+# Run it in its own herdr pane. q quits; a desk's key jumps to its pane.
+here="$(cd "$(dirname "$0")" && pwd)"
+if command -v node >/dev/null 2>&1; then
+  exec node "$here/office-monitor.mjs" "$@"
+elif command -v bun >/dev/null 2>&1; then
+  exec bun "$here/office-monitor.mjs" "$@"
+else
+  echo "office-monitor needs node or bun on PATH." >&2
+  exit 1
+fi
