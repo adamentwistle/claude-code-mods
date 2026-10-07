@@ -30,14 +30,22 @@ Three mods for Claude Code. A mod is a plugin that runs inside Claude Code and c
 
 ## Install
 
-In a Claude Code session:
+In a Claude Code session, send each command as its own message. Pasting them all at once makes Claude Code read the whole paste as one marketplace name, and it fails with "not a valid GitHub owner/repo shorthand".
 
-```
-/plugin marketplace add adamentwistle/claude-code-mods
-/plugin install office@cc-mods
-/plugin install viewfinder@cc-mods
-/plugin install ambient@cc-mods
-```
+1. Add the marketplace:
+   ```
+   /plugin marketplace add adamentwistle/claude-code-mods
+   ```
+2. Install the mods you want, one command at a time:
+   ```
+   /plugin install office@cc-mods
+   ```
+   ```
+   /plugin install viewfinder@cc-mods
+   ```
+   ```
+   /plugin install ambient@cc-mods
+   ```
 
 The repo is private, so Claude Code clones it with your own git credentials. Your account needs access to it. If your machine reaches GitHub through an SSH host alias, add the marketplace by its SSH URL instead, for example `/plugin marketplace add git@github-personal:adamentwistle/claude-code-mods.git`. A local clone works too: `/plugin marketplace add ./claude-code-mods`.
 
