@@ -76,3 +76,7 @@ Each mod's own README has the full detail and options. The options are also in `
 - The office never reads the `.key` files that sit next to Claude Code's session records.
 - The office's detailed characters and furniture come from Kenney's free CC0 packs. See `plugins/office/assets/CREDITS.txt`.
 - Tests: `claude plugin test ./plugins/<name>`.
+
+## Licence
+
+MIT, see `LICENSE`. The Kenney art packs are CC0.
